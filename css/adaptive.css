@@ -49,7 +49,7 @@ ul {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  width: 1158px;
+  width: 428px;
 }
 a {
   cursor: pointer;
@@ -59,7 +59,15 @@ svg {
 }
 
 /*===================================BUTTONS====================================*/
+.burg-btn {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
 
+  cursor: pointer;
+}
 .button {
   display: block;
   font-family: "Roboto", sans-serif;
@@ -122,7 +130,6 @@ svg {
 /*===========================================================*/
 /*======================Header==================================*/
 .header {
-  /*background-color: #31d0aa;*/
   border-bottom: 1px solid #e7e9fc;
 
   margin-left: auto;
@@ -130,10 +137,17 @@ svg {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
+
+.burger-menu {
+  stroke: #2e2f42;
+}
 .header-cont {
+  height: 70px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
+
 /*=====================================Logo===============================*/
 .logo {
   font-family: "Raleway", sans-serif;
@@ -163,8 +177,7 @@ svg {
   align-items: center;
 }
 .nav-list {
-  display: flex;
-  margin-right: 332px;
+  padding-bottom: 284px;
 }
 .list-link {
   position: relative;
@@ -173,24 +186,8 @@ svg {
   padding-bottom: 24px;
 }
 
-.list-link.active:after {
-  content: "";
-  position: absolute;
-
-  display: block;
-  width: 100%;
-  height: 4px;
-  background: #404bbf;
-  border-radius: 2px;
-  bottom: 0;
-}
-
 .list-link.active {
   color: #404bbf;
-}
-
-.nav-list {
-  gap: 40px;
 }
 
 .list {
@@ -198,11 +195,14 @@ svg {
 }
 
 .list-link {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+
   letter-spacing: 0.02em;
   color: #2e2f42;
+
+  letter-spacing: 0.02em;
 
   transition-property: color;
   transition-duration: 250ms;
@@ -213,45 +213,91 @@ svg {
 .list-link:focus {
   color: #404bbf;
 }
-/*=====================Contacts=======================*/
-/*.address {
-  display: flex;
-  align-items: center;
-}*/
-.contacts-list {
-  display: flex;
-  gap: 40px;
+/*===================== Modal Contacts=======================*/
+.mobile-close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 24px;
+  height: 24px;
+  background-color: #e7e9fc;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+
+}
+.mobile-close-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.mobile-modal {
+ opacity: 0;
+  position: fixed;
+  width: 428px;
+  padding: 80px 40px 40px 40px;
+  background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.mobile-modal.is-open {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contacts-list {
   margin-left: 0px;
   font-style: normal;
 }
-/*.contacts-listitems:not(:last-child) {
-  padding-right: 40px;
-}*/
 
-.contact-item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
+.contact-item-tel {
+  display: block;
+  width: 353px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  color: #4d5ae5;
+  padding-bottom: 40px;
+}
+.contact-item-email {
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
   letter-spacing: 0.02em;
   color: #434455;
+  padding-bottom: 48px;
 }
 
 .contacts-list a {
-  color: #434455;
-
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  text-decoration: none;
-
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-item:hover,
+.contact-item-tel:hover,
 .contact-item:focus {
   color: #404bbf;
+}
+
+.social-media-list-modal {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  margin-top: 8px;
 }
 
 /* ============================Section 1 Hero==========================*/
@@ -261,26 +307,27 @@ svg {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people.jpg);
+    url(../images/Dark-bg-428.jpg);
 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #2e2f42;
 
-  max-width: 1440px;
-  height: 600px;
+  max-width: 428px;
+ 
 
   margin: 0 auto;
   text-align: center;
-  padding-top: 188px;
-  padding-bottom: 188px;
+
+  padding-top: 112px;
+  padding-bottom: 112px;
 }
 
 .hero-title {
-  padding-bottom: 48px;
+  padding-bottom: 72px;
   font-weight: 700;
-  font-size: 56px;
+  font-size: 36px;
   line-height: 1.07;
   max-width: 496px;
   letter-spacing: 0.02em;
@@ -298,7 +345,7 @@ svg {
 /* ===================================Section-2 Features===========================*/
 
 .icon-container {
-  display: flex;
+  display: none;
   background-color: #f4f4fd;
   border-radius: 4px;
   width: 264px;
@@ -309,39 +356,41 @@ svg {
 
   align-items: center;
   justify-content: center;
+
+ 
 }
 
 .features {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  /*background-color: #8e8f99;*/
+  padding-top: 96px;
+  padding-bottom: 96px;
+  
 }
 
-.features-list {
-  display: flex;
-
-  gap: 24px;
-}
-
-.features-list-content {
-  width: calc((100% - 72px) / 3);
-}
-
-/*.features-list li:not(:last-child) {
-  margin-right: 24px;
-}*/
-/*.features-list-content 
+/*@media (min-width:768px:) 
 {
-  flex-basis: calc((100% - 72px) / 4);
+  .features-list-content {
+    width: calc((100% - 72px) / 3);
+  }
+  
 }*/
+
+.features-list-content{
+  margin-bottom: 72px;
+}
+
+
 
 .features-list-title {
-  margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
+  font-weight: 700;
+font-size: 36px;
+line-height: 40px;
+text-align: center;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+color: #2E2F42;
+margin-bottom: 8px;
+
+
 }
 
 .features-list-text {
@@ -364,7 +413,10 @@ svg {
 }
 
 .intro {
+  display: none;
   padding-bottom: 120px;
+
+
 }
 .intro-title {
   margin-bottom: 72px;
@@ -379,18 +431,12 @@ svg {
 
 /*============================Section 4 Our Team========================*/
 .ourteam-list {
-  display: flex;
-
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  gap: 24px;
+  
 }
 
 .team {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   background-color: #f4f4fd;
 }
 .team-title {
@@ -403,9 +449,16 @@ svg {
   color: #2e2f42;
 }
 
-/*.team-list {
-  /*background-color: #ffffff;
-}*/
+.team-list {
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 72px;
+  background-color: #ffffff;
+}
+
+.team-list:last-child {
+  margin-bottom: 0px;
+}
 .team-name {
   font-weight: 500;
   font-size: 20px;
@@ -500,8 +553,11 @@ svg {
 }
 .customer-list {
   display: flex;
-  gap: 24px;
-  max-width: 1440px;
+  flex-wrap: wrap;
+  row-gap: 72px;
+  column-gap: 16px;
+  
+  
   justify-content: center;
   align-items: center;
 }
@@ -511,8 +567,7 @@ svg {
   height: 100%;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+ width: 190px;
 
   border: 1px solid #8e8f99;
   border-radius: 4px;
@@ -525,10 +580,10 @@ svg {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customer-icon {
+/*.customer-icon {
   width: calc((100% - 120px) / 6);
   height: 88px;
-}
+}*/
 
 .customer-icon-item {
   fill: currentColor;
@@ -544,13 +599,15 @@ svg {
 
 /*.logo*/
 .footer-logo {
-  display: inline-block;
-  margin-bottom: 16px;
+  display: block;
+  text-align: center;
+  margin-right: 0px;
+  margin-bottom: 17.5px;
 }
 .footer {
   background-color: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 97px;
+  padding-bottom: 96px;
 }
 
 .footer-studio {
@@ -562,21 +619,24 @@ svg {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  margin: 0 auto;
+  margin-bottom: 72px;
 }
-.footer-container {
-  display: flex;
-
-  align-items: baseline;
-  justify-content: space-between;
+.footer-container {}
+.footer-right-block {
+  margin: 0 auto;
 }
+  
 .footer-text-right {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
 
+text-align: center;
   letter-spacing: 0.02em;
+
   margin-bottom: 16px;
+  
 
   color: #ffffff;
 }
@@ -599,7 +659,7 @@ svg {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-top: 8px;
+  margin-bottom: 72px;
 }
 
 .social-media-link-footer:hover,
@@ -608,19 +668,16 @@ svg {
 }
 
 .footer-right-block {
-  margin-right: 120px;
+  
 }
 .team-icon-cont {
-  margin-right: 80px;
+ 
 }
 
 /*---------------------Subscribe form------------------------*/
 
 .subscribe-form {
-  display: flex;
-  gap: 24px;
-  align-items: end;
-
+  
 }
 .subscribe-title {
   font-family: "Roboto";
@@ -628,6 +685,8 @@ svg {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+
+  text-align: center;
 
   letter-spacing: 0.02em;
 
@@ -640,18 +699,20 @@ svg {
 
 .subscribe-input {
   display: block;
-  width: 264px;
+  width: 398px;
   height: 40px;
   border: 1px solid #ffffff;
   background: #2e2f42;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding: 8px 16px 10px;
+  margin-bottom: 16px;
 
   color: #ffffff;
 }
 
 .subscribe-btn {
+  display: block;
   height: 40px;
   width: 165px;
 
@@ -659,7 +720,7 @@ svg {
   padding: 8px 64px 8px 24px;
 
   background: #4d5ae5;
-  border-radius: 4px;
+  margin: 0 auto;
 
   font-family: "Roboto";
   font-style: normal;
@@ -686,7 +747,7 @@ svg {
 .subscribe-icon {
   position: absolute;
   top: 10px;
-  right: 24px;
+  right: 140px;
   pointer-events: none;
 }
 .subscribe-input::placeholder {
@@ -1095,5 +1156,5 @@ textarea:focus {
 }
 
 .modal-form-agreement-link {
-  color: #4D5AE5;
+  color: #4d5ae5;
 }
