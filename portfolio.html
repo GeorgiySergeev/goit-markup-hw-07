@@ -19,31 +19,37 @@
     <link rel="stylesheet" href="./css/adaptive.css" />
   </head>
   <body>
-    <!-- Header-->
+   
+   
     <header class="header">
       <div class="container header-cont">
-        <nav class="nav list">
-          <!--===================Logo=======================-->
-          <a href="./index.html" class="logo link">
-            WEB<span class="logo-studio">Studio</span></a
-          >
+        <a href="./index.html" class="logo link">
+          WEB<span class="logo-studio">Studio</span></a
+        >
 
+        <button
+          class="menu-open-btn menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="burger-menu" width="32px" height="32px">
+            <use href="./images/icon.svg#icon-menu-burger"></use>
+          </svg>
+        </button>
+
+        <nav class="nav">
           <ul class="nav-list list">
             <li>
-              <a href="./index.html" class="list-link link">Studio</a>
+              <a href="./index.html" class="list-link  link">Studio</a>
             </li>
             <li>
-              <a href="./portfolio.html" class="list-link active link"
-                >Portfolio</a
-              >
+              <a href="./portfolio.html" class="list-link active link">Portfolio</a>
             </li>
             <li>
               <a href="" class="list-link link">Contacts</a>
             </li>
           </ul>
         </nav>
-
-        <!--==================Contacts==================-->
 
         <address class="contacts list">
           <ul class="contacts-list list">
@@ -60,15 +66,18 @@
           </ul>
         </address>
       </div>
-    </header>
 
+      
+        
+    </header>
+<!--
     <main>
       <section class="portfolio-section">
         <div class="container">
           <h1 hidden>Portfolio</h1>
-          <!-- ========================Filter==============================-->
+         
 
-          <ul class="list filter-btn">
+           <ul class="list filter-btn">
             <li><button type="button" class="button-portfolio">All</button></li>
             <li>
               <button type="button" class="button-portfolio">Web Site</button>
@@ -82,8 +91,7 @@
             </li>
           </ul>
 
-          <!--=====================Portfolio content block=====================-->
-
+         
           <ul class="work list">
             <li class="work-list">
               <a href="" class="link portfolio-link">
@@ -312,7 +320,7 @@
       </section>
     </main>
 
-    <!--Footer-->
+    
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer-right-block">
@@ -384,6 +392,6 @@
           </div>
         </form>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>
