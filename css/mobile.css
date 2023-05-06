@@ -1,0 +1,20 @@
+@media screen and (min-width: 428px) {
+    .container {
+      max-width: 428px;
+    }
+  }
+
+  @media screen and (min-width: 428px) {
+    .hero {
+      max-width: 428px;
+    }
+  }
+
+  @media screen and (min-width: 428px) {
+    .hero-title {
+      max-width: 320px;
+      
+    }
+  }
+
+  /*footer*/

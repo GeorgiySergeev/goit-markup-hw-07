@@ -45,8 +45,8 @@ ul {
 }
 /*Phone*/
 .container {
-  max-width: 428px;
-  min-width: 320px;
+  max-width: 100%;
+  
 
   padding-left: 16px;
   padding-right: 16px;
@@ -404,7 +404,7 @@ svg {
     gap: 40px;
   }
 }
-
+/*mobile win*/
 .mobile-contact-item-tel {
   display: block;
   font-weight: 700;
@@ -622,9 +622,7 @@ svg {
     letter-spacing: 0.02em;
   }
 }
-.features-list-content {
-  
-}
+
 /*================================Section-3 What we are doing======================*/
 .do-list {
   display: flex;
@@ -867,33 +865,33 @@ svg {
 /*============Footer================================*/
 
 /*.logo*/
-.footer-logo {
+/* .footer-logo {
   display: block;
   text-align: center;
   margin-right: 0px;
   margin-bottom: 17.5px;
-}
+} */
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .footer-logo {
     text-align: left;
   }
-}
-.footer {
+} */
+/* .footer {
   background-color: #2e2f42;
   padding-top: 97px;
   padding-bottom: 96px;
-}
-@media screen and (min-width: 1200px) {
+} */
+/* @media screen and (min-width: 1200px) {
   .footer {
     padding-top: 101px;
   }
-}
+} */
 
-.footer-studio {
+/* .footer-studio {
   color: #f4f4fd;
-}
-.footer-text {
+} */
+/* .footer-text {
   width: 264px;
   font-size: 16px;
   line-height: 1.5;
@@ -901,21 +899,21 @@ svg {
   color: #f4f4fd;
   margin: 0 auto;
   margin-bottom: 72px;
-}
-@media screen and (min-width: 768px) {
+} */
+/* @media screen and (min-width: 768px) {
   .footer-text {
     margin-bottom: 0px;
   }
-}
+} */
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .footer-container {
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
   }
-}
+} */
 
 @media screen and (min-width: 1200px) {
   .footer-container {
@@ -934,13 +932,13 @@ svg {
     margin: 0px 24px 0px 0px;
   }
 }
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
   .footer-right-block {
     margin-right: 120px;
   }
-}
+} */
 
-.footer-text-right {
+/* .footer-text-right {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -948,15 +946,15 @@ svg {
   letter-spacing: 0.02em;
   margin-bottom: 16px;
   color: #ffffff;
-}
+} */
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .footer-text-right {
     text-align: left;
   }
-}
+} */
 
-.social-media-link-footer {
+/* .social-media-link-footer {
   width: 100%;
   height: 100%;
   display: flex;
@@ -975,7 +973,7 @@ svg {
   justify-content: center;
   gap: 16px;
   margin-bottom: 72px;
-}
+} */
 
 .social-media-link-footer:hover,
 .social-media-link-footer:focus {
@@ -984,13 +982,13 @@ svg {
 
 
 /*---------------------Subscribe form------------------------*/
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .subscribe-form {
     display: flex;
     gap: 24px;
     align-items: flex-end;
   }
-}
+} */
 
 @media screen and (max-width: 768px) {
   .subscribe-form {
@@ -1000,7 +998,7 @@ svg {
     align-items: center;
   }
 }
-.subscribe-title {
+/* .subscribe-title {
   font-family: "Roboto";
 
   font-weight: 500;
@@ -1009,19 +1007,19 @@ svg {
   text-align: center;
   letter-spacing: 0.02em;
   color: #ffffff;
-}
+} */
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .subscribe-title {
     text-align: left;
   }
-}
+} */
 .subs-title {
   display: block;
   margin-bottom: 16px;
 }
 
-.subscribe-input {
+/* .subscribe-input {
   display: block;
   width: 398px;
   height: 40px;
@@ -1032,7 +1030,7 @@ svg {
   padding: 8px 16px 10px;
 
   color: #ffffff;
-}
+} */
 
 @media screen and (min-width: 786px) {
   .subscribe-input {
@@ -1064,10 +1062,10 @@ svg {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.subscribe-btn:hover,
+/* .subscribe-btn:hover,
 .subscribe-btn:focus {
   background-color: #404bbf;
-}
+} */
 .subs-btn-box {
   position: relative;
 }
@@ -1088,13 +1086,13 @@ svg {
 /*====================================Portfolio=============================*/
 
 /*-------------------------------------------------------------------------*/
-.portfolio-section {
-  padding: 96px 120px;
-}
+/* .portfolio-section {
+  padding: 100px 120px;
+} */
 
 /*-------------------------------------------------------------------------*/
 
-.filter-btn {
+/* .filter-btn {
   display: flex;
   gap: 24px;
   justify-content: center;
@@ -1104,9 +1102,9 @@ svg {
 .button-portfolio:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+} */
 
-.portfolio-link {
+/* .portfolio-link {
   display: block;
 
   transition-property: box-shadow;
@@ -1118,7 +1116,7 @@ svg {
 .portfolio-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+} */
 .work-title {
   font-weight: 500;
   font-size: 20px;
