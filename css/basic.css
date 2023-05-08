@@ -695,26 +695,30 @@ svg {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.9);
 }
+/* @media screen and (min-width: 320px) and (max-width: 1158px) {
+  .modal {
+    max-width: 90vh;
+    overflow-y: scroll;
+  }
+} */
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: calc(100% - 36px);
+  width: calc(100% - 30px);
+  height: 90vh;
+  
 
-  min-height: 584px;
-  padding: 72px 24px 24px 24px;
-
-  transform: translate(-50%, -50%) scale(1);
+  padding: 72px 16px 24px 16px;
 
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 100ms linear 0ms,
-    opacity 100ms linear 0ms /*visibility 200ms linear 0ms*/;
-  overflow: scroll;
+  opacity 100ms linear 0ms /*visibility 200ms linear 0ms*/;
 }
 .close {
   position: absolute;
@@ -835,13 +839,13 @@ textarea:focus {
 }
 
 .input-box {
-  margin-top: 34px;
+  margin-top: 16px;
   margin-bottom: 16px;
 }
 
 .form-input {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 .form-icon {
   position: absolute;

@@ -35,11 +35,8 @@
      margin: 0 auto;
   }
 }
-@media screen and (min-width: 428px) {
-  .modal {
-    width: 392px;
-  }
-}
+
+
 
 @media screen and (min-width: 408px) {
   .social-media-list-modal {
@@ -48,3 +45,11 @@
   }
 }
 /*footer*/
+
+/*main modal*/
+@media screen and (min-width: 428px) {
+  .modal {
+    width: 392px;
+    height: 584px;
+  }
+}

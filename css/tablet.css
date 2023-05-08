@@ -287,3 +287,10 @@
         width: calc((100% - 24px) / 2);
       }
 }*/
+/*main modal*/
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    padding: 72px 24px 24px 24px;
+  }
+}
