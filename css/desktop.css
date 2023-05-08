@@ -30,12 +30,12 @@
 /*hero*/
 @media screen and (min-width: 1158px) {
   .hero {
-    max-width: 1158px;
+    /* max-width: 1158px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero-bg/people-office\ 1158.jpg);
+      url(../images/hero-bg/people-office\ 1158.jpg); */
     padding-top: 188px;
     padding-bottom: 188px;
   }
@@ -165,11 +165,24 @@
 }
 
 @media screen and (min-width: 1158px) {
-    .work {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        row-gap: 48px;
-        column-gap: 24px;
-      }
+  .work {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 48px;
+    column-gap: 24px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .work-list {
+    max-width: 360px;
+  }
+}
+
+
+/*main modal*/
+@media screen and (min-width: 1158px) {
+  .modal {
+    width: 408px;
+  }
 }
