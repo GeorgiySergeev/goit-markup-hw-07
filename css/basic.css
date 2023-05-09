@@ -707,8 +707,9 @@ svg {
   top: 50%;
   left: 50%;
   width: calc(100% - 30px);
-  height: 90vh;
   
+  overflow-y: scroll;
+  max-height: 90vh;
 
   padding: 72px 16px 24px 16px;
 
@@ -718,7 +719,9 @@ svg {
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 100ms linear 0ms,
-  opacity 100ms linear 0ms /*visibility 200ms linear 0ms*/;
+    opacity 100ms linear 0ms /*visibility 200ms linear 0ms*/;
+
+
 }
 .close {
   position: absolute;
